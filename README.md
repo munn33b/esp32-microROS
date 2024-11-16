@@ -4,6 +4,8 @@ This Repository elaborates the detailed Instructions used to setup MicroROS with
 
 For this setup both ESP-IDF (Recommended) and Arduino IDE are used.
 
+[TOC]
+
 ## System Overview
 
 MicroROS with ROS2 can be visualized as Server/Client Architecture. The system consists of following important components:
