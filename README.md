@@ -20,7 +20,7 @@ MicroROS with ROS2 can be visualized as Server/Client Architecture. The system c
 
 The Visual Representation of Architecture is as follows:
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/MicroROS-Architecture.png)
+![](./assets/MicroROS-Architecture.png)
 
 In the above image, NVIDIA Jetson Orin is Host Computer, since it is powerful device that can run an Operating System. The Host Computer is running MicroROS Agent. On the other side, ESP32 is used as client, it has Firmware that is flashed. The Communication protocol is USB (Serial Communication) in this case
 
@@ -39,17 +39,17 @@ Firstly, we will setup MicroROS with ESP32 using Arduino IDE. Since this is easi
 
 [Arduino IDE Download Page](https://www.arduino.cc/en/software)
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/arduino-installation.png)
+![](./assets/arduino-installation.png)
 
 Choose Linux Zip File (64 Bits) as an option. Next, extract the Zip File in any directory and then run arduino-ide. It will run Arduino IDE
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/arduino-interface.png)
+![](./assets/arduino-interface.png)
 
 #### Setup Arduino IDE for ESP32 Programming
 
 Since Arduino IDE is mostly built for Arduino Based boards, we need to install some additional packages for programming ESP32 with Arduino IDE.
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/arduino-ide-open-preferences.webp)
+![](./assets/arduino-ide-open-preferences.webp)
 
 Go to preferences and Enter the following into "Addtional Board Manager URLs" field
 
@@ -57,29 +57,29 @@ Go to preferences and Enter the following into "Addtional Board Manager URLs" fi
 
 Then, click the "OK " button.
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/ESP32-URL-Arduino-IDE.webp)
+![](./assets/ESP32-URL-Arduino-IDE.webp)
 
 Next, Open the Boards Manager. Go to **Tools > Boards > Boards Manager**
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/boardsManager.webp)
+![](./assets/boardsManager.webp)
 
 Search for **ESP32** and press Install button for **ESP32 by Espressif Systems**
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/installing.webp)
+![](./assets/installing.webp)
 
 That's all! The Board Manager will be installed in some moments.
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/esp32_manager_installed.png)
+![](./assets/esp32_manager_installed.png)
 
 Now, restart your Arduino IDE for changes to take effect.
 
 Then, we can test the installation by selecting board in **Tools > Board** 
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/board_selection.png)
+![](./assets/board_selection.png)
 
 In Our Case, it is DOIT ESP32 DEVKIT V1
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/devkit_selected.png)
+![](./assets/devkit_selected.png)
 
 Now, we are ready to program ESP32 using Arduino IDE!
 
@@ -91,13 +91,13 @@ In this step, we will add MicroROS Library in Arduino IDE to use MicroROS header
 
 `https://github.com/micro-ROS/micro_ros_arduino/tree/humble`
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/microROS-arduino-libary-download-page.png)
+![](./assets/microROS-arduino-libary-download-page.png)
 
 After Downloading this Zip File, we need to add this library to Arduino IDE.
 
 - Open Arduino IDE and go to **Sketch > Include Library > Add .ZIP Library**
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/arduino-add-zip-library.png)
+![](./assets/arduino-add-zip-library.png)
 
 - Select that ZIP file downloaded in the previous step. 
 
@@ -177,7 +177,7 @@ ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888
 >
 > To Identify the IP Address of your Host Machine running ROS2 run the command **ifconfig** or **ip a** in Terminal
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/ip-address.png) 
+![](./assets/ip-address.png) 
 
 > Note down the IP Address
 
@@ -187,7 +187,7 @@ Now that our MicroROS Agent (Or Server) is running and listening on selected por
 
 Open the Code in "Codes" directory in Arduino IDE
 
-![](/home/muneeb/Private/BrainSwarm/esp32-microROS/assets/subscriber_code_esp32.png)
+![](./assets/subscriber_code_esp32.png)
 
 On Line Number 40, Modify
 
